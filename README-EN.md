@@ -3,9 +3,8 @@
 **Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Database Knowledgeable](#databaseknowledgeable)
-- [Database Knowledgeable: Get information from](#databaseknowledgeable-get-information-from)
 - [License](#license)
-- [Characteristics What does data-auditor offer you?](#characteristics-%C2%BFqu%C3%A9-te-offers-data-auditor)
+- [Characteristics What does it offer you?](#characteristics-%C2%BFqu%C3%A9-te-offers)
 - [Features to implement / Caracteristicas a implement](#features-to-implement--caracteristicas-a-implementar)
 - [Planning, Requirements Engineering and risk management / Planning, Requirements Engineering and risk management](#planning-requirements-engineering-and-risk-management--planacion-ingenieria-de-requerimientos-y-gestion-del-risk )
 - [Software Design / Software Design](#software-design--dise%C3%B1o-de-software)
@@ -33,8 +32,6 @@
 
 [Readme version in English](./README-EN.md)
 
-## Database Knowledgeable: Get information about
-
 database-knowledgeable allows you to obtain basic information from your database, generate reports and documentation in popular formats such as markdown and mermaid. More specifically
 
 ![alt text](image.png)
@@ -43,7 +40,7 @@ database-knowledgeable allows you to obtain basic information from your database
 
 This code is licensed under the GNU General Public License version 3.0 or later (LGPLV3+). A full copy of the license can be found at https://www.gnu.org/licenses/lgpl-3.0-standalone.htmlalone.html0-standalone.html
 
-## Features What does data-auditor offer you?
+## Features What does it offer you?
 
 database-knowledgeable allows you to obtain basic information from your database, generate reports and documentation in popular formats such as markdown and mermaid. More specifically
 

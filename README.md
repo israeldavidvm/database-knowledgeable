@@ -3,9 +3,8 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [DatabaseKnowledgeable](#databaseknowledgeable)
-  - [DatabaseKnowledgeable: Obten informacion de](#databaseknowledgeable-obten-informacion-de)
   - [Licencia](#licencia)
-  - [Caracteristicas ¿Qué te ofrece data-auditor?](#caracteristicas-%C2%BFqu%C3%A9-te-ofrece-data-auditor)
+  - [Caracteristicas ¿Qué te ofrece?](#caracteristicas-%C2%BFqu%C3%A9-te-ofrece)
   - [Features to implement / Caracteristicas a implementar](#features-to-implement--caracteristicas-a-implementar)
   - [Planning, Requirements Engineering and risk management / Planeacion, Ingenieria de Requerimientos y gestion del riesgo](#planning-requirements-engineering-and-risk-management--planeacion-ingenieria-de-requerimientos-y-gestion-del-riesgo)
   - [Software Design / Diseño de Software](#software-design--dise%C3%B1o-de-software)
@@ -33,8 +32,6 @@
 
 [Readme version in English](./README-EN.md)
 
-## DatabaseKnowledgeable: Obten informacion de 
-
 database-knowledgeable te permite obtener infomcacion basica de tu base de datos, generar informes y documentacion en formatos populares como markdown y mermaid. Mas concretamente
 
 ![alt text](image.png)
@@ -43,7 +40,7 @@ database-knowledgeable te permite obtener infomcacion basica de tu base de datos
 
 Este código tiene licencia bajo la licencia pública general de GNU versión 3.0 o posterior (LGPLV3+). Puede encontrar una copia completa de la licencia en https://www.gnu.org/licenses/lgpl-3.0-standalone.htmlalone.html0-standalone.html
 
-## Caracteristicas ¿Qué te ofrece data-auditor?
+## Caracteristicas ¿Qué te ofrece?
 
 database-knowledgeable te permite obtener infomcacion basica de tu base de datos, generar informes y documentacion en formatos populares como markdown y mermaid. Mas concretamente
 
