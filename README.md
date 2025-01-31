@@ -20,7 +20,14 @@
           - [Ejemplos](#ejemplos)
           - [Llaves Foraneas](#llaves-foraneas)
           - [Ejemplos](#ejemplos-1)
-    - [Ejemplos de uso](#ejemplos-de-uso)
+    - [Uso](#uso)
+      - [Requisitos](#requisitos)
+        - [Instalacion](#instalacion)
+          - [Como usuario](#como-usuario)
+          - [Como biblioteca (Solo si quieres crear un programa que use la libreria)](#como-biblioteca-solo-si-quieres-crear-un-programa-que-use-la-libreria)
+        - [Archivo .env](#archivo-env)
+      - [Uso desde la interfaz de linea de comandos](#uso-desde-la-interfaz-de-linea-de-comandos)
+      - [Uso como libreria](#uso-como-libreria)
     - [Make a donation. Your contribution will make a difference.](#make-a-donation-your-contribution-will-make-a-difference)
     - [Find me on:](#find-me-on)
   - [Technologies used / Tecnologias usadas](#technologies-used--tecnologias-usadas)
@@ -182,9 +189,20 @@ Coincide con la siguiente expresion regular
 - taxonomy_child_id
 - taxonomy_parent_id
 
+### Uso
 
+#### Requisitos 
 
-### Ejemplos de uso
+##### Instalacion 
+
+###### Como usuario
+
+composer require israeldavidvm/database-knowledgeable
+
+###### Como biblioteca (Solo si quieres crear un programa que use la libreria)
+composer require israeldavidvm/database-knowledgeable
+
+##### Archivo .env
 
 Establece una configuracion en el archivo .env. como la siguiente
 
@@ -199,7 +217,30 @@ DB_PASSWORD=<password>
 
 ```
 
-luego en un archivo php cualquiera llama a la biblioteca de la siguiente forma
+#### Uso desde la interfaz de linea de comandos 
+
+Para poder usar el programa solo necesitaras un archivo .env con la configuracion de tu base de datos como se especifico anteriormente y ejecutar el comando
+
+
+```composer generateMarkdownDocumentation [<depth> [<path>]] ```
+
+Arguments:
+  depth                 Profundidad de los encabezados [default: 1]
+  path                  La ruta al archivo .env. [default: "./.env"]
+
+Options:
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+      --silent          Do not output any message
+  -q, --quiet           Only errors are displayed. All other output is suppressed
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+
+#### Uso como libreria
+
+En un archivo php cualquiera llama a la biblioteca de la siguiente forma
 
 ```
 
@@ -218,7 +259,7 @@ $metaInfoEnvFile=[
 
 $databaseKnowledgeable = new DatabaseKnowledgeable($metaInfoEnvFile);
 
-$databaseKnowledgeable->generateDocumentation();
+$databaseKnowledgeable->generateMarkdownDocumentation($depth);
 
 ```
 

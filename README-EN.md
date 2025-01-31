@@ -1,245 +1,312 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Database Knowledgeable](#databaseknowledgeable)
-- [License](#license)
-- [Characteristics What does it offer you?](#characteristics-%C2%BFqu%C3%A9-te-offers)
-- [Features to implement / Caracteristicas a implement](#features-to-implement--caracteristicas-a-implementar)
-- [Planning, Requirements Engineering and risk management / Planning, Requirements Engineering and risk management](#planning-requirements-engineering-and-risk-management--planacion-ingenieria-de-requerimientos-y-gestion-del-risk )
-- [Software Design / Software Design](#software-design--dise%C3%B1o-de-software)
-- [Structural Perspective](#structural-perspective)
-- [Logical View of Software Architecture](#logical-view-of-software-architecture)
-- [Behavioral Perspective](#behavioral-perspective)
-- [Documentation](#documentation)
-- [Conventions used during documentation](#conventions-used-during-documentation)
-- [Support and Limitations of algorithms](#support-and-limitations-of-algorithms)
-- [Algorithms used to determine PK, Fk and other attributes](#algorithms-used-to-determine-pk-fk-and-other-attributes)
-- [Naming conventions used for element identification](#naming-conventions-used-for-element-identification)
-- [Primary Keys](#primary-keys)
-- [Examples](#examples)
-- [Foreign Keys](#foreign-keys)
-- [Examples](#examples-1)
-- [Examples of use](#examples-of-use)
-- [Make a donation. Your contribution will make a difference.](#make-a-donation-your-contribution-will-make-a-difference)
-- [Find me on:](#find-me-on)
-- [Technologies used / Tecnologias usadas](#technologies-used--tecnologias-usadas)
+- [Database Knowledgeable](#database-knowledgeable)
+  - [License](#license)
+  - [Characteristics What does it offer?](#characteristics-what-does-it-offer)
+  - [features to implement / characteristics to be implemented](#features-to-implement--characteristics-to-be-implemented)
+  - [Planning, Requirements Engineering and Risk Management / Planning, Requirements Engineering and Risk Management](#planning-requirements-engineering-and-risk-management--planning-requirements-engineering-and-risk-management)
+  - [Design Software / Software Design](#design-software--software-design)
+    - [Structural perspective](#structural-perspective)
+      - [Logica view of software architecture](#logica-view-of-software-architecture)
+    - [Behavior perspective](#behavior-perspective)
+  - [Documentation](#documentation)
+    - [Conventions used during documentation](#conventions-used-during-documentation)
+    - [Support and limiting algorithms](#support-and-limiting-algorithms)
+      - [Algorithms used to determine PK, FK and other attributes](#algorithms-used-to-determine-pk-fk-and-other-attributes)
+        - [Name conventions used for the identification of elements](#name-conventions-used-for-the-identification-of-elements)
+          - [Primary keys](#primary-keys)
+          - [Examples](#examples)
+          - [Foraneal keys](#foraneal-keys)
+          - [Examples](#examples-1)
+    - [Use](#use)
+      - [Requirements](#requirements)
+        - [Facility](#facility)
+          - [as a user](#as-a-user)
+          - [as a library (only if you want to create a program that uses library)](#as-a-library-only-if-you-want-to-create-a-program-that-uses-library)
+        - [File .env](#file-env)
+      - [use from the command line interface](#use-from-the-command-line-interface)
+      - [use as library](#use-as-library)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+<!-Start doctoc generated touch please keep comment here to allow Auto Update->
+<!-Don's Edit This Section, Instead Re-Run Doctor to Update->
+** Table of content ***generated with [doctoc] (https://github.com/thlorenz/doctoc)*
+
+- [Database Knowledgeable] (#databaseknowledageable)
+- [License] (#license)
+-[CHARACTERISTICS WHAT OFFER YOU?] (#CHARACTERISTICS-%C2%BFQU%C3%A9-TE-DEFREE)
+-[features to implement / characteristics to be implemented] (#features-to-implement-caracteristic-to-implement)
+-[Planning, Requirements Engineering and Risk Management / Planning, Requirements Engineering and Risk Management] (#Planning-Requirements-Engineering-And-Risk-Management-Planning-Ingenieria-De-Requerlations-Y-Gestion-Del-Riesgo )
+-[Software Design / Software Design] (#Software-Design-Dise%C3%B1O-De-Software)
+- [Structural Perspective] (#perspective-structural)
+-[Logic view of software architecture] (#-logic-of-the-architecture-del-software)
+-[behavior perspective] (#perspective-of-behavior)
+- [Documentation] (#Documentation)
+-[Conventions used during documentation] (#Conventions-Useas-During-Documentation)
+-[Support and limiting algorithms] (#support-and-limiting-of-the-algorithms)
+-[Algorithms used to determine PK, FK and other attributes] (#algorithmos-uded-for-end-pk-fk-and-demributes)
+-[Name conventions used for the identification of elements] (#conventions-of-numbers-for-for-identification-of-element)
+- [Primary keys] (#Keys-First)
+- [Examples] (#examples)
+- [Foraneal Keys] (#Key-Foreropes)
+- [Examples] (#examples-1)
+-[Examples of use] (#examples-of-use)
+- [Make to Donation. Your Contribution Will Make A Difference.] (#Make-A-Donation-Your-Contribution-Will-Make-A-Difference)
+-[Find me on:] (#Find-me-on)
+-[Technologies used / used technologies] (#Technologies-ined-Tecnologias-Usadas)
+
+<!-End doctoc generated touch please keep comment here to allow Auto Update->
 
 
 # Database Knowledgeable
 
-[Readme version in English](./README-EN.md)
+[Readme version in English] (./ Readme-en.md)
 
-database-knowledgeable allows you to obtain basic information from your database, generate reports and documentation in popular formats such as markdown and mermaid. More specifically
+Database-KNOWLEDGEABLE allows you to obtain basic infomction of your database, generate reports and documentation in popular formats such as Markdown and Mermaid. More specifically
 
-![alt text](image.png)
+! [alt text] (image.png)
 
 ## License
 
-This code is licensed under the GNU General Public License version 3.0 or later (LGPLV3+). A full copy of the license can be found at https://www.gnu.org/licenses/lgpl-3.0-standalone.htmlalone.html0-standalone.html
+This Code is licensed under the general public license of GNU version 3.0 or posterior (LGPLV3+). You can find a complete copy of the license at https://www.gnu.org/licenses/lgPl-3.0-standalone.htmlalone.html0-standalone.html
 
-## Features What does it offer you?
+## Characteristics What does it offer?
 
-database-knowledgeable allows you to obtain basic information from your database, generate reports and documentation in popular formats such as markdown and mermaid. More specifically
+Database-KNOWLEDGEABLE allows you to obtain basic infomction of your database, generate reports and documentation in popular formats such as Markdown and Mermaid. More specifically
 
-- Generate a markdown report where each table in your database is listed, along with a mermaid diagram, a brief explanation of the table, its fields, etc.
+- It generates a Markdown report where each table of your database is stated, next to a Mermaid diagram, a brief explanation of the table, its fields, etc.
 
-- Only postgresql is supported
+- PostgreSql is only supported
 
-## Features to implement
+## features to implement / characteristics to be implemented
 
-- Generation of entity relationship diagrams
+- Generation of diagrams entity relationship
 
 - Generation of the relational model
 
-- Support for more Database Management Systems
-## Planning, Requirements Engineering and risk management / Planning, Requirements Engineering and risk management
+- Support to more database managers systems
+## Planning, Requirements Engineering and Risk Management / Planning, Requirements Engineering and Risk Management
 
-These sections of the project will be carried out through a conceptual site so that they can be easily accessible by non-technical personnel.
+These sections of the project will be carried out through a site in Notion so that they can be easily accessible by non -technical staff.
 
-Request the access link from authorized personnel
+Request access link to authorized personnel
 
-## Software Design / Software Design
+## Design Software / Software Design
 
-### Structural Perspective
+### Structural perspective
 
-#### Logical View of the Software Architecture
+#### Logica view of software architecture
 
-### Behavioral perspective
+### Behavior perspective
 
 ## Documentation
 
 ### Conventions used during documentation
 
-Notation Conventions for Grammar:
+Notation conventions for grammar:
 
-The <> are used to surround a non-terminal symbol
+<> Are used to surround a non -terminal symbol
 
-The ::= is used for production rules
+The :: = Used for production rules
 
-Non-terminal symbols are expressed as a string or normal characters
+Non -terminal symbols are expressed as a normal chain or characters
 
-The following group of pairs of symbols should be used together with expressions in the following way: the first in each pair is written as a suffix after the expression and the second surrounds the expression.
+The following group of symbolic pairs, should be used together with expressions as follows: the first in each couple is written as suffix after the expression and the second surrounds the expression.
 
 He ? or [] indicate that the expression is optional
 
-The * or {} indicates that the expression is repeated 0 or more times
+The * or {} indicates that the expression is repeated or more times
 
 The + indicates that the expression is repeated 1 or more times
 
-If you want to use one of the previous characters, you must precede \ with
+If you want to use one of the previous characters, it must be preceded \ with
 
-### Support and Limitations of algorithms
+### Support and limiting algorithms
 
-Unfortunately, some DBMS support SQL standards differently, so there is no universal algorithm that works perfectly for all DBMSs.
+Unfortunately some SGBD support SQL standards differently so there is no universal algorithm that works perfectly for all SGBD.
 
-We hope in the future to be able to change this but currently I only use it as a personal tool and I lack the time resources to add these features. Only proven support will be provided to postgresql.
+We hope in the future to change this but currently only use it as a personal tool and I lack the time resources to add these characteristics, only proven support will be provided to PostgreSql
 
-#### Algorithms used to determine PK, Fk and other attributes
+#### Algorithms used to determine PK, FK and other attributes
 
-Although the information_schema view set could be used to determine some of the database structures
+Although the set of information_schema views could be used to determine some of the database structures
 
-It was discovered that additive joins are usually generated in Postgresql, so naming conventions were used for speed. We hope to improve this feature in the future.
+It was discovered that in PostgreSql joins additives, so names of names by speed were usually used. We hope to improve this characteristic in the future.
 
-Additive join failure example
+Example of Join Additive Failure
 
-For example, if you wanted to know if a column in the information_schema.key_column_usage is a PRIMARY KEY, FOREIGN KEY, etc., you would use the query
+For example, if you would like to know if a column in the information_schema.Key_column_usage is a primary key, foreign key, etc., the query should be used
 
-```sql
-SELECT kcu.column_name,kcu.table_name,tc.constraint_name,tc.constraint_type
-FROM
-information_schema.table_constraints tc
-JOIN
-information_schema.key_column_usage kcu
-ON tc.constraint_name = kcu.constraint_name
-```
-However, if we look closely, these results are affected by an additive join.
+`` sql
+Select Kcc.Column_name, Kcc.
+From
+Information_schema.able_constraints TC
+Join
+INFORMATION_SCHEMA.KEY_COLUMN_USAGE KC
+On Tc.constraint_name = kcu.constraint_name
+``
+However, if we carefully observe these results, they are affected by an additive Join
 
 For the particular case of having
-```sql
-SELECT column_name,table_name FROM information_schema.key_column_usage WHERE table_name ~ '^insight_taxonomy$'
-```
+`` sql
+Select column_name, table_name from information_schema.Key_column_usage where table_name ~ '^insight_taxonomy $'
+``
 
-which gives results like this
+that shows results in this way
 
-![Information_schema.key_column_usage_where_table_name_insight_taxonomy](images/key_column_usage_where_table_name_insight_taxonomy.png)
+! [Information_schema.Key_column_usage_where_name_insight_taxonomy] (images/key_column_usage_where_nable_name_insight_taxonomy.png)
 
 and a
-```sql
-SELECT tc.constraint_name
-FROM
-information_schema.table_constraints tc
+`` sql
+Select TC.Constraint_name
+From
+Information_schema.able_constraints TC
 WHERE
-tc.constraint_name ~ '^taxonomy_id_fkey$'
-```
-which gives results like this
+tc.constraint_name ~ '^taxonomy_id_fkey $'
+``
+that shows results in this way
 
-![table_constraints_where_taxonomy_id_fkey](images/table_constraints_where_taxonomy_id_fkey.png)
+! [Table_constraints_where_taxonomy_id_fkey] (images/table_constraints_where_taxonomy_id_fkey.png)
 
-you have to
+You have to
 
-```sql
-SELECT kcu.column_name,kcu.table_name,tc.constraint_name,tc.constraint_type
-FROM
-information_schema.table_constraints tc
-JOIN
-information_schema.key_column_usage kcu
-ON tc.constraint_name = kcu.constraint_name
+`` sql
+Select Kcc.Column_name, Kcc.
+From
+Information_schema.able_constraints TC
+Join
+INFORMATION_SCHEMA.KEY_COLUMN_USAGE KC
+On Tc.constraint_name = kcu.constraint_name
 WHERE
-kcu.table_name ~ '^insight_taxonomy$'
+Kcc.able_name ~ '^insight_taxonomy $'
 
-```
+``
 
-generates the following results that reflect the additive join
+generates the following results that reflect the join additive
 
-![additiveJoin.png](images/additiveJoin.png)
+! [Adivivoin.png] (images/adionntivejoin.png)
 
-##### Naming conventions used for element identification
+##### Name conventions used for the identification of elements
 
-###### Primary Keys
-All id name attribute
+###### Primary keys
+All ID name attribute
 
 ###### Examples
 id
 
-###### Foreign Keys
-Any attribute that has the following form
-```
-<nextTableName>[_<role>]_id
+###### Foraneal keys
+Any attribute that has the following way
+``
+<Tabllasigular name> [_ <bol>] _ id
 
 Where [role] serves to identify the entity in recursive relationships
 
-```
+``
 
-Match the following regular expression
-```
-^[a-zA-Z0-9ñ]+(?:_[a-zA-Z0-9ñ]+)?_id$
-```
+Coincides with the following regular expression
+``
+^[a-za-z0-9ñ]+(?: _ [a-za-z0-9ñ]+)? _ Id $
+``
 ###### Examples
-- user_id
--taxonomy_child_id
--taxonomy_parent_id
+- User_id
+- Taxonomy_child_id
+- Taxonomy_Parent_id
+
+### Use
+
+#### Requirements
+
+##### Facility
+
+###### as a user
+
+Composer requires Israeldavidvm/Database-KnowLedageable
+
+###### as a library (only if you want to create a program that uses library)
+Composer requires Israeldavidvm/Database-KnowLedageable
+
+##### File .env
+
+Establish a configuration in the .env file. Like the next
+
+``
+
+DB_connection = PGSQL
+Db_host = 127.0.0.1
+DB_Port = 5432
+Db_database = <databasename>
+Db_usename = <suername>
+DB_Password = <password>
+
+``
+
+#### use from the command line interface
+
+In order to use the program you will only need an .EV file with the configuration of your database as specified above and execute the command
 
 
+`` Composer Generakdowndocumentation [<peph> [<Path>]] `` ``
 
-### Examples of use
+Arguments:
+Depth depth [default: 1]
+Path the route to the .env file. [default: "./.env"]
 
-Set a configuration in the .env file. like the following
+Options:
+-H, -Help Display Help for the Given Command. WHEN NO COMMAND IS GIVEN DISPLAY HELP FOR THE LIST COMMAND
+-Silent do not output any message
+-q, --quie Only Error Displayed. All other output is support
+-V, -Version Display This Application Version
+`` Ansi | --No-Ansi Force (OR DISABLE --No-Ansi) ANSI OUTPUT
+-N, --No-Interaction do not ask any interactive question
+-V | VV | VVV, -Verbose Increase The Verbosity of Messages: 1 For Normal Output, 2 For More Verbose Output and 3 for Debug
 
-```
 
-DB_CONNECTION=pgsql
-DB_HOST=127.0.0.1
-DB_PORT=5432
-DB_DATABASE=<DatabaseName>
-DB_USERNAME=<UserName>
-DB_PASSWORD=<password>
+#### use as library
 
-```
+In any pHP file it calls the library as follows
 
-then in a php file anyone calls the library as follows
+``
 
-```
+<? PHP
 
-<?php
+Include __dir __. "/vendor/Autoload.php";
 
-include __DIR__."/vendor/autoload.php";
+Use Israeldavidvm \ DatabaseknowLedgeable \ Databaseknowledgeable;
 
-use Israeldavidvm\DatabaseKnowledgeable\DatabaseKnowledgeable;
-
-$metaInfoEnvFile=[
-'pathEnvFolder'=>'.',
-'name'=>'.env',
-'mode'=>'exclude',
-'tables'=>[],
+$ metainfoenvfile = [
+'Pathenvfolder' => '.',
+'name' => '.
+'mode' => 'exclude',
+'Tables' => [],
 ];
 
-$databaseKnowledgeable = new DatabaseKnowledgeable($metaInfoEnvFile);
+$ databaseknowledgeable = new databaseknowledgeable ($ metainfoenvfile);
 
-$databaseKnowledgeable->generateDocumentation();
+$ databaseknowledgeable-> generateMarkDowndocumentation ($ depth);
 
-```
+``
 
-output table example
+Exit table example
 
-![alt text](image.png)
+! [alt text] (image.png)
 
-### Make a donation. Your contribution will make a difference.
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/israeldavidvm)
-[![Paypal](https://img.shields.io/badge/Paypal-@israeldavidvm-0077B5?style=for-the-badge&logo=paypal&logoColor=white&labelColor=101010)](https://paypal.me/israeldavidvm )
-[![Binance](https://img.shields.io/badge/Binance_ID-809179020-101010?style=for-the-badge&logo=binancel&logoColor=white&labelColor=101010)](https://www.binance.com/ activity/referral-entry/CPA?ref=CPA_004ZGH9EIS)
+### Make to Donation. Your Contribution Will Make to Difference.
+[! [ko-fi] (https://ko-fi.com/img/githubutton_sm.svg)] (https://ko-fi.com/israeldavidvm)
+[! [PayPal] (https://img.shields.io/badge/paypal-@israeldavidvm-0077b5?style=for-the-badge&ogo=paypal&logocolor=white&labelColor=101010)] (https://paypal.me/israeldavidvm )
+[! [Binance] (https://img.shields.io/badge/binance_id-809179020-1010 ?style=for Activity/Referral-Entry/CPa? Ref = CPA_004ZGH9EIS)
 
 ### Find me on:
-[![GITHUB](https://img.shields.io/badge/Github-israeldavidvm-gray?style=for-the-badge&logo=github&logoColor=white&labelColor=101010)](https://github.com/israeldavidvm)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-israeldavidvm-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=101010)](https://www.linkedin.com/ in/israeldavidvm/)
-[![Twitter](https://img.shields.io/badge/Twitter-@israeldavidvm-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white&labelColor=101010)](https://twitter.com/israeldavidvm )
-[![Facebook](https://img.shields.io/badge/Facebook-israeldavidvm-1877F2?style=for-the-badge&logo=facebook&logoColor=white&labelColor=101010)](https://www.facebook.com/ israeldavidvm)
-[![Instagram](https://img.shields.io/badge/Instagram-@israeldavidvmv-gray?style=for-the-badge&logo=instagram&logoColor=white&labelColor=101010)](https://www.instagram.com /israeldavidvm/)
-[![TikTok](https://img.shields.io/badge/TikTok-@israeldavidvm-E4405F?style=for-the-badge&logo=tiktok&logoColor=white&labelColor=101010)](https://www.tiktok.com /@israeldavidvm)
-[![YouTube](https://img.shields.io/badge/YouTube-@israeldavidvm-FF0000?style=for-the-badge&logo=youtube&logoColor=white&labelColor=101010)](https://www.youtube.com /channel/UCmZLFpEPNdwpJOhal0wry7A)
+[! [Github] (https://img.shields.io/badge/github-israeldavidvm-gray?
+[! [LinkedIn] (https://img.shields.io/badge/linkedIn-israeldavidvm-0077b5?style=for-the-badge&ogo=LinkedI in/Israeldavidvm/)
+[! [Twitter] (https://img.shields.io/badge/twitter-@israeldavidvm-1da1f2?style=FOR-the-badge&ogo=twitter&logocolor=white&labelColor=101010)] (https://twitter.com/israeldavidvm )
+[! [Facebook] (https://img.shields.io/badge/facebook-israeldavidvm-1877f2? Israeldavidvm)
+[! [Instagram] (https://img.shields.io/badge/instagram-@israeldavidvmv-gray?style=for-the-badge&ogo=instagram&logocolor=White&labelColor=101010)] (https://www.instagram.com /Israeldavidvm/)
+[! [Tiktok] (https://img.shields.io/badge/tiktok-@israeldavidvm-e4405f?style=FOR-the-badge&ogo=tiktok&logocolor=white&labelColor=101010)] (https://www.tiktok.com /@Israeldavidvm)
+[! [YouTube] (https://img.shields.io/badge/youtube-@israeldavidvm-ff0000?style=FOR-the-badge&ogo=youtube&logocolor=white&labelcolor=101010)] (https://www.youtube.com /Channel/UCMZLFPENPDWPJOHAL0WRY7A)
 
-## Technologies used / Used technologies
+## Technologies used / used technologies
 
-[![PHP](https://img.shields.io/badge/php-blue?logo=php&style=for-the-badge&logoColor=blue&labelColor=gray)]()
+[! [PHP] (https://img.shields.io/badge/php-blue?ogo=php&style=for

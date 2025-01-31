@@ -55,21 +55,23 @@ class DatabaseKnowledgeable {
     }
 
 
-    public function generateMarkdownDocumentation(){
+    public function generateMarkdownDocumentation($depth=1){
         try {
+
             // Obtener las tablas de la base de datos
             $tableNames = $this->getTableNames($this->metaInfoEnvFile);
 
             // Inicializar el contenido en formato Markdown
-            $markdown = "#Explicacion de las tablas en la Base de Datos\n\n";
-
+            $markdown = $this->generateMarkdownTitle(
+                "Explicacion de las tablas en la Base de Datos"
+                ,$depth) ;
             foreach ($tableNames as $tableName) {
 
 
                 $tableDescription=$this->getTableComment($tableName);     
                 $columns=$this->getTableColumns($tableName);       
                 
-                $markdown.="## $tableName\n";
+                $markdown.=$this->generateMarkdownTitle("$tableName",$depth+1); 
                 $markdown.="$tableDescription\n";
 
                 $markdown.="``` mermaid \n erDiagram\n";
@@ -89,8 +91,7 @@ class DatabaseKnowledgeable {
             }
 
             // Guardar el resumen en un archivo Markdown
-            file_put_contents('resumen_tablas.md', $markdown);
-            echo "Resumen generado en 'resumen_tablas.md'.";
+            file_put_contents('db-documentation.md', $markdown);
 
         } catch (PDOException $e) {
             echo "Error en la conexión: " . $e->getMessage();
@@ -313,6 +314,22 @@ class DatabaseKnowledgeable {
 
     public function slugify($string) {
         return str_replace(' ', '_', $string);
+    }
+
+    public function generateMarkdownTitle($title,$depth=1,$lineJump=true){
+        $markdownTitle='';
+
+        for($i=0;$i<$depth;$i++){
+            $markdownTitle.='#';
+        }
+
+        $markdownTitle="$markdownTitle $title";
+
+        if($lineJump){
+            $markdownTitle.="\n";
+        }
+
+        return $markdownTitle;
     }
 
 

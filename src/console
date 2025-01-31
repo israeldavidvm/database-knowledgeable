@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+
+<?php
+
+require __DIR__.'/../vendor/autoload.php'; // Ajusta la ruta si es necesario
+
+use Symfony\Component\Console\Application;
+use Israeldavidvm\DatabaseKnowledgeable\AppCommand; // Asegúrate que este namespace es correcto.
+
+$application = new Application();
+$application->add(new AppCommand()); // Añade tu comando
+$application->run();
+
+?>
