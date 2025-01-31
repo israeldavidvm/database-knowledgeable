@@ -55,6 +55,8 @@ database-knowledgeable te permite obtener infomcacion basica de tu base de datos
 
 - Solo se tiene soporte para postgresql
 
+- Interfaz de linea de comandos para acceder a las funciones de la libreria
+
 ## Features to implement / Caracteristicas a implementar
 
 - Generacion de diagramas entidad relacion 
