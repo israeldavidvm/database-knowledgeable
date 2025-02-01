@@ -21,8 +21,8 @@
         }
     },
     "scripts": {
-        "generateMarkdownDocumentation": "./bin/console app:generateMarkdownDocumentation"
+        "generateMarkdownDocumentation": "./bin/database-knowledgeable app:generateMarkdownDocumentation"
     },
-    "bin": ["bin/console"]
+    "bin": ["bin/database-knowledgeable"]
 
 }

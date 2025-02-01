@@ -230,7 +230,7 @@ DB_PASSWORD=<password>
 Para poder usar el programa solo necesitaras un archivo .env con la configuracion de tu base de datos como se especifico anteriormente y ejecutar el comando
 
 
-```cpx israeldavidvm/database-knowledgeable generateMarkdownDocumentation [<depth> [<path>]] ```
+```cpx israeldavidvm/database-knowledgeable database-knowledgeable app:generateMarkdownDocumentation [<depth> [<path>]] ```
 
 Arguments:
   depth                 Profundidad de los encabezados [default: 1]
@@ -253,6 +253,26 @@ Para poder usar el programa solo necesitaras un archivo .env con la configuracio
 
 
 ```composer generateMarkdownDocumentation [<depth> [<path>]] ```
+
+Arguments:
+  depth                 Profundidad de los encabezados [default: 1]
+  path                  La ruta al archivo .env. [default: "./.env"]
+
+Options:
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+      --silent          Do not output any message
+  -q, --quiet           Only errors are displayed. All other output is suppressed
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+  
+  ##### De forma convencional
+
+Para poder usar el programa solo necesitaras un archivo .env con la configuracion de tu base de datos como se especifico anteriormente y ejecutar el comando
+
+
+```./vendor/bin/database-knowledgeable app:generateMarkdownDocumentation [<depth> [<path>]] ```
 
 Arguments:
   depth                 Profundidad de los encabezados [default: 1]
