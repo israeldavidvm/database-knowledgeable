@@ -21,6 +21,8 @@
         }
     },
     "scripts": {
-        "generateMarkdownDocumentation": "./src/console app:generateMarkdownDocumentation"
-    }
+        "generateMarkdownDocumentation": "./bin/console app:generateMarkdownDocumentation"
+    },
+    "bin": ["bin/console"]
+
 }

@@ -2,7 +2,7 @@
 
 <?php
 
-require __DIR__.'/../vendor/autoload.php'; // Ajusta la ruta si es necesario
+include $_composer_autoload_path ?? __DIR__ . '/../vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
 use Israeldavidvm\DatabaseKnowledgeable\AppCommand; // Asegúrate que este namespace es correcto.

@@ -199,7 +199,11 @@ Coincide con la siguiente expresion regular
 
 ###### Como usuario
 
+composer install israeldavidvm/database-knowledgeable
+
 composer require israeldavidvm/database-knowledgeable
+
+cpx israeldavidvm/database-knowledgeable generateMarkdownDocumentation
 
 ###### Como biblioteca (Solo si quieres crear un programa que use la libreria)
 composer require israeldavidvm/database-knowledgeable
@@ -221,6 +225,30 @@ DB_PASSWORD=<password>
 
 #### Uso desde la interfaz de linea de comandos 
 
+##### Usando cpx
+
+Para poder usar el programa solo necesitaras un archivo .env con la configuracion de tu base de datos como se especifico anteriormente y ejecutar el comando
+
+
+```cpx israeldavidvm/database-knowledgeable generateMarkdownDocumentation [<depth> [<path>]] ```
+
+Arguments:
+  depth                 Profundidad de los encabezados [default: 1]
+  path                  La ruta al archivo .env. [default: "./.env"]
+
+Options:
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+      --silent          Do not output any message
+  -q, --quiet           Only errors are displayed. All other output is suppressed
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+  
+
+
+##### De forma convencional
+
 Para poder usar el programa solo necesitaras un archivo .env con la configuracion de tu base de datos como se especifico anteriormente y ejecutar el comando
 
 
@@ -238,6 +266,7 @@ Options:
       --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
   -n, --no-interaction  Do not ask any interactive question
   -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+  
 
 
 #### Uso como libreria

@@ -1,53 +1,5 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [Explicacion de las tablas en la Base de Datos](#explicacion-de-las-tablas-en-la-base-de-datos)
-  - [migrations](#migrations)
-  - [password_resets](#password_resets)
-  - [failed_jobs](#failed_jobs)
-  - [personal_access_tokens](#personal_access_tokens)
-  - [concepts](#concepts)
-  - [images](#images)
-- [Images](#images)
-  - [Convenciones de notacion para la gramatica:](#convenciones-de-notacion-para-la-gramatica)
-  - [Gramatica de las urls](#gramatica-de-las-urls)
-  - [Generacion de rutas para Imagenes Responsivas, no responsivas locales y externas](#generacion-de-rutas-para-imagenes-responsivas-no-responsivas-locales-y-externas)
-    - [Ruta a Imagen no responsiva local o externa](#ruta-a-imagen-no-responsiva-local-o-externa)
-    - [Rutas a imagenes locales o externas responsivas](#rutas-a-imagenes-locales-o-externas-responsivas)
-    - [ConventionalDir](#conventionaldir)
-    - [Externa o interna](#externa-o-interna)
-  - [Almacenar las rutas a un imagen en la base de datos:](#almacenar-las-rutas-a-un-imagen-en-la-base-de-datos)
-  - [Rutas para ser almacenadas en BD de recursos como imagenes o directorios locales siguiendo las convenciones de laravel:](#rutas-para-ser-almacenadas-en-bd-de-recursos-como-imagenes-o-directorios-locales-siguiendo-las-convenciones-de-laravel)
-  - [Rutas para trabajar con el Storage de recursos como imagenes o directorios locales siguiendo las convenciones de laravel:](#rutas-para-trabajar-con-el-storage-de-recursos-como-imagenes-o-directorios-locales-siguiendo-las-convenciones-de-laravel)
-  - [Almacenar la ruta base de una imagen en la base de datos](#almacenar-la-ruta-base-de-una-imagen-en-la-base-de-datos)
-    - [Usando la convencion de Laravel y la convencion de directoros con el mismo nombre de la imagen para imagenes locales](#usando-la-convencion-de-laravel-y-la-convencion-de-directoros-con-el-mismo-nombre-de-la-imagen-para-imagenes-locales)
-    - [Usando solo la convencion de directoros con el mismo nombre de la imagen](#usando-solo-la-convencion-de-directoros-con-el-mismo-nombre-de-la-imagen)
-  - [Recuperar imagenes en la bd:](#recuperar-imagenes-en-la-bd)
-  - [insight_taxonomy](#insight_taxonomy)
-  - [insight_valueproposition](#insight_valueproposition)
-  - [profile_taxonomy](#profile_taxonomy)
-  - [profiles](#profiles)
-  - [source_taxonomy](#source_taxonomy)
-  - [publication_taxonomy](#publication_taxonomy)
-  - [publications](#publications)
-  - [sources](#sources)
-  - [source_user](#source_user)
-  - [taxonomy_valueproposition](#taxonomy_valueproposition)
-  - [insights](#insights)
-  - [insight_profile_source](#insight_profile_source)
-  - [taxonomies](#taxonomies)
-  - [Explanation of some taxonomies / Explicación de algunas taxonomías](#explanation-of-some-taxonomies--explicaci%C3%B3n-de-algunas-taxonom%C3%ADas)
-  - [valuepropositions](#valuepropositions)
-  - [profile_profile_source_valueproposition](#profile_profile_source_valueproposition)
-  - [users](#users)
-  - [taxonomy_taxonomy](#taxonomy_taxonomy)
-  - [valueproposition_valueproposition](#valueproposition_valueproposition)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-#### Explicacion de las tablas en la Base de Datos
-##### migrations
+# Explicacion de las tablas en la Base de Datos
+## migrations
 
 ``` mermaid 
  erDiagram
@@ -58,7 +10,7 @@ character_varying  migration
 }
 
 ```
-##### password_resets
+## password_resets
 
 ``` mermaid 
  erDiagram
@@ -69,7 +21,7 @@ character_varying  token
 }
 
 ```
-##### failed_jobs
+## failed_jobs
 
 ``` mermaid 
  erDiagram
@@ -84,7 +36,7 @@ character_varying  uuid
 }
 
 ```
-##### personal_access_tokens
+## personal_access_tokens
 
 ``` mermaid 
  erDiagram
@@ -102,7 +54,7 @@ character_varying  token
 }
 
 ```
-##### concepts
+## concepts
 
 ``` mermaid 
  erDiagram
@@ -115,7 +67,7 @@ text  description
 }
 
 ```
-##### images
+## images
 #### Images
 Con el objetivo de aumentar la flexibilidad del sistema se dara soporte a imagenes normales he imagenes responsive, tambien se permitira que las mismas tengan un almacenamiento local o externo.
 
@@ -298,7 +250,7 @@ character_varying  url
 }
 
 ```
-##### insight_taxonomy
+## insight_taxonomy
 
 ``` mermaid 
  erDiagram
@@ -311,7 +263,7 @@ bigint  insight_id
 }
 
 ```
-##### insight_valueproposition
+## insight_valueproposition
 
 ``` mermaid 
  erDiagram
@@ -324,7 +276,7 @@ timestamp_without_time_zone  updated_at
 }
 
 ```
-##### profile_taxonomy
+## profile_taxonomy
 
 ``` mermaid 
  erDiagram
@@ -335,7 +287,7 @@ bigint  taxonomy_id
 }
 
 ```
-##### profiles
+## profiles
 Profiles busca ser un tipo de entidad que puede ser utilizada para representar user persona, buyer persona o clientes ideales
 ``` mermaid 
  erDiagram
@@ -348,7 +300,7 @@ character_varying  url
 }
 
 ```
-##### source_taxonomy
+## source_taxonomy
 
 ``` mermaid 
  erDiagram
@@ -359,7 +311,7 @@ bigint  taxonomy_id
 }
 
 ```
-##### publication_taxonomy
+## publication_taxonomy
 
 ``` mermaid 
  erDiagram
@@ -372,7 +324,7 @@ timestamp_without_time_zone  updated_at
 }
 
 ```
-##### publications
+## publications
 La idea detras de una publicacion es poder representar varios tipos de contenido en una pagina web, como por ejemplo html, markdown, una estructura json que sera convertida a html, etc.
 
 De alli que se utilize el campo taxonomy_contentType_id para identificar el tipo de contenido almacenado en el campo content
@@ -394,7 +346,7 @@ character_varying  url
 }
 
 ```
-##### sources
+## sources
 
 ``` mermaid 
  erDiagram
@@ -407,7 +359,7 @@ text  description
 }
 
 ```
-##### source_user
+## source_user
 
 ``` mermaid 
  erDiagram
@@ -418,7 +370,7 @@ bigint  user_id
 }
 
 ```
-##### taxonomy_valueproposition
+## taxonomy_valueproposition
 
 ``` mermaid 
  erDiagram
@@ -431,7 +383,7 @@ timestamp_without_time_zone  updated_at
 }
 
 ```
-##### insights
+## insights
 
 ``` mermaid 
  erDiagram
@@ -443,7 +395,7 @@ text  name
 }
 
 ```
-##### insight_profile_source
+## insight_profile_source
 Esta tabla permite asociar los insight a un profile, y ademas asociar una puntuacion y source a esa accion de asociar el insight a un perfil
 
 Lo que establece un mecanismo para:
@@ -465,7 +417,7 @@ timestamp_without_time_zone  updated_at
 }
 
 ```
-##### taxonomies
+## taxonomies
 Con el objetivo de aumentar la flexibilidad del sistema se utilizo un diseño de taxonomias recursivas lo que permite crear taxonomias de taxonomias y agregar nuevas taxonomias.
 
 Notese que una taxonomia puede tener muchas taxonomias padres al igual que puede tener muchas taxonomias hijas
@@ -523,7 +475,7 @@ text  description
 }
 
 ```
-##### valuepropositions
+## valuepropositions
 
 ``` mermaid 
  erDiagram
@@ -536,7 +488,7 @@ text  url
 }
 
 ```
-##### profile_profile_source_valueproposition
+## profile_profile_source_valueproposition
 Esta tabla permite asociar los valueproposition a un profile que lo ofrece  profile_owner_id, con una persona que lo puntua el profile_evaluator_id, una puntuacion y source a esa accion de asociar el  valueproposition
 
 Lo que establece un mecanismo para:
@@ -559,7 +511,7 @@ timestamp_without_time_zone  updated_at
 }
 
 ```
-##### users
+## users
 
 ``` mermaid 
  erDiagram
@@ -575,7 +527,7 @@ character_varying  remember_token
 }
 
 ```
-##### taxonomy_taxonomy
+## taxonomy_taxonomy
 
 ``` mermaid 
  erDiagram
@@ -588,7 +540,7 @@ bigint  taxonomy_child_id
 }
 
 ```
-##### valueproposition_valueproposition
+## valueproposition_valueproposition
 
 ``` mermaid 
  erDiagram
