@@ -1,3 +1,51 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Explicacion de las tablas en la Base de Datos](#explicacion-de-las-tablas-en-la-base-de-datos)
+  - [migrations](#migrations)
+  - [password_resets](#password_resets)
+  - [failed_jobs](#failed_jobs)
+  - [personal_access_tokens](#personal_access_tokens)
+  - [concepts](#concepts)
+  - [images](#images)
+      - [Images](#images)
+        - [Convenciones de notacion para la gramatica:](#convenciones-de-notacion-para-la-gramatica)
+        - [Gramatica de las urls](#gramatica-de-las-urls)
+        - [Generacion de rutas para Imagenes Responsivas, no responsivas locales y externas](#generacion-de-rutas-para-imagenes-responsivas-no-responsivas-locales-y-externas)
+          - [Ruta a Imagen no responsiva local o externa](#ruta-a-imagen-no-responsiva-local-o-externa)
+          - [Rutas a imagenes locales o externas responsivas](#rutas-a-imagenes-locales-o-externas-responsivas)
+          - [ConventionalDir](#conventionaldir)
+          - [Externa o interna](#externa-o-interna)
+        - [Almacenar las rutas a un imagen en la base de datos:](#almacenar-las-rutas-a-un-imagen-en-la-base-de-datos)
+        - [Rutas para ser almacenadas en BD de recursos como imagenes o directorios locales siguiendo las convenciones de laravel:](#rutas-para-ser-almacenadas-en-bd-de-recursos-como-imagenes-o-directorios-locales-siguiendo-las-convenciones-de-laravel)
+        - [Rutas para trabajar con el Storage de recursos como imagenes o directorios locales siguiendo las convenciones de laravel:](#rutas-para-trabajar-con-el-storage-de-recursos-como-imagenes-o-directorios-locales-siguiendo-las-convenciones-de-laravel)
+        - [Almacenar la ruta base de una imagen en la base de datos](#almacenar-la-ruta-base-de-una-imagen-en-la-base-de-datos)
+          - [Usando la convencion de Laravel y la convencion de directoros con el mismo nombre de la imagen para imagenes locales](#usando-la-convencion-de-laravel-y-la-convencion-de-directoros-con-el-mismo-nombre-de-la-imagen-para-imagenes-locales)
+          - [Usando solo la convencion de directoros con el mismo nombre de la imagen](#usando-solo-la-convencion-de-directoros-con-el-mismo-nombre-de-la-imagen)
+        - [Recuperar imagenes en la bd:](#recuperar-imagenes-en-la-bd)
+  - [insight_taxonomy](#insight_taxonomy)
+  - [insight_valueproposition](#insight_valueproposition)
+  - [profile_taxonomy](#profile_taxonomy)
+  - [profiles](#profiles)
+  - [source_taxonomy](#source_taxonomy)
+  - [publication_taxonomy](#publication_taxonomy)
+  - [publications](#publications)
+  - [sources](#sources)
+  - [source_user](#source_user)
+  - [taxonomy_valueproposition](#taxonomy_valueproposition)
+  - [insights](#insights)
+  - [insight_profile_source](#insight_profile_source)
+  - [taxonomies](#taxonomies)
+        - [Explanation of some taxonomies / Explicación de algunas taxonomías](#explanation-of-some-taxonomies--explicaci%C3%B3n-de-algunas-taxonom%C3%ADas)
+  - [valuepropositions](#valuepropositions)
+  - [profile_profile_source_valueproposition](#profile_profile_source_valueproposition)
+  - [users](#users)
+  - [taxonomy_taxonomy](#taxonomy_taxonomy)
+  - [valueproposition_valueproposition](#valueproposition_valueproposition)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Explicacion de las tablas en la Base de Datos
 ## migrations
 

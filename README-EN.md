@@ -27,6 +27,9 @@
           - [as a library (only if you want to create a program that uses library)](#as-a-library-only-if-you-want-to-create-a-program-that-uses-library)
         - [File .env](#file-env)
       - [use from the command line interface](#use-from-the-command-line-interface)
+        - [If it is included in a project by required with the global (composer global requires Israeldavidvm/Database-KNowledgeable)](#if-it-is-included-in-a-project-by-required-with-the-global-composer-global-requires-israeldavidvmdatabase-knowledgeable)
+        - [If it is included in a project through require without the Global](#if-it-is-included-in-a-project-through-require-without-the-global)
+        - [If it is installed by installing or starts from the project root (composer install israeldavidvm/database-knowledgeable)](#if-it-is-installed-by-installing-or-starts-from-the-project-root-composer-install-israeldavidvmdatabase-knowledgeable)
       - [use as library](#use-as-library)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -53,7 +56,14 @@
 - [Examples] (#examples)
 - [Foraneal Keys] (#Key-Foreropes)
 - [Examples] (#examples-1)
--[Examples of use] (#examples-of-use)
+- [Use] (#use)
+- [Requirements] (#requirements)
+- [Installation] (#installation)
+- [as a user] (#as-user)
+-[As a library (only if you want to create a program that uses library)] (#as-biblioteca-only-si-want-you-with-a-program-which-your-libreria)
+- [.env] (#file-env)
+-[Use from the command line interface] (#use-from-the-interfaz-of-line-de-compos)
+-[Use as a library] (#use-as-libreria)
 - [Make to Donation. Your Contribution Will Make A Difference.] (#Make-A-Donation-Your-Contribution-Will-Make-A-Difference)
 -[Find me on:] (#Find-me-on)
 -[Technologies used / used technologies] (#Technologies-ined-Tecnologias-Usadas)
@@ -80,6 +90,8 @@ Database-KNOWLEDGEABLE allows you to obtain basic infomction of your database, g
 - It generates a Markdown report where each table of your database is stated, next to a Mermaid diagram, a brief explanation of the table, its fields, etc.
 
 - PostgreSql is only supported
+
+- Command line interface to access the functions of the library
 
 ## features to implement / characteristics to be implemented
 
@@ -223,7 +235,12 @@ Coincides with the following regular expression
 
 ###### as a user
 
+Composer Install Israeldavidvm/Database-KnowLedageable
+
+Global composer requires Israeldavidvm/Database-KnowLedageable
+
 Composer requires Israeldavidvm/Database-KnowLedageable
+
 
 ###### as a library (only if you want to create a program that uses library)
 Composer requires Israeldavidvm/Database-KnowLedageable
@@ -244,6 +261,48 @@ DB_Password = <password>
 ``
 
 #### use from the command line interface
+
+##### If it is included in a project by required with the global (composer global requires Israeldavidvm/Database-KNowledgeable)
+
+In order to use the program you will only need an .EV file with the configuration of your database as specified above and execute the command
+
+
+`` ~/.config/composer/vendor/bin/database-knowLedageable app: generateMarkDowndocumentation [<peph> [<Path>]] `` `` `` `` `` ``
+
+Arguments:
+Depth depth [default: 1]
+Path the route to the .env file. [default: "./.env"]
+
+Options:
+-H, -Help Display Help for the Given Command. WHEN NO COMMAND IS GIVEN DISPLAY HELP FOR THE LIST COMMAND
+-Silent do not output any message
+-q, --quie Only Error Displayed. All other output is support
+-V, -Version Display This Application Version
+`` Ansi | --No-Ansi Force (OR DISABLE --No-Ansi) ANSI OUTPUT
+-N, --No-Interaction do not ask any interactive question
+-V | VV | VVV, -Verbose Increase The Verbosity of Messages: 1 For Normal Output, 2 For More Verbose Output and 3 for Debug
+
+##### If it is included in a project through require without the Global
+
+In order to use the program you will only need an .EV file with the configuration of your database as specified above and execute the command
+
+
+`'.
+
+Arguments:
+Depth depth [default: 1]
+Path the route to the .env file. [default: "./.env"]
+
+Options:
+-H, -Help Display Help for the Given Command. WHEN NO COMMAND IS GIVEN DISPLAY HELP FOR THE LIST COMMAND
+-Silent do not output any message
+-q, --quie Only Error Displayed. All other output is support
+-V, -Version Display This Application Version
+`` Ansi | --No-Ansi Force (OR DISABLE --No-Ansi) ANSI OUTPUT
+-N, --No-Interaction do not ask any interactive question
+-V | VV | VVV, -Verbose Increase The Verbosity of Messages: 1 For Normal Output, 2 For More Verbose Output and 3 for Debug
+
+##### If it is installed by installing or starts from the project root (composer install israeldavidvm/database-knowledgeable)
 
 In order to use the program you will only need an .EV file with the configuration of your database as specified above and execute the command
 

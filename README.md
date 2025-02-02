@@ -27,6 +27,9 @@
           - [Como biblioteca (Solo si quieres crear un programa que use la libreria)](#como-biblioteca-solo-si-quieres-crear-un-programa-que-use-la-libreria)
         - [Archivo .env](#archivo-env)
       - [Uso desde la interfaz de linea de comandos](#uso-desde-la-interfaz-de-linea-de-comandos)
+        - [Si es incluido en un proyecto por medio de require con el global (composer global require israeldavidvm/database-knowledgeable)](#si-es-incluido-en-un-proyecto-por-medio-de-require-con-el-global-composer-global-require-israeldavidvmdatabase-knowledgeable)
+        - [Si es incluido en un proyecto por medio de require sin el global (composer require israeldavidvm/database-knowledgeable)](#si-es-incluido-en-un-proyecto-por-medio-de-require-sin-el-global-composer-require-israeldavidvmdatabase-knowledgeable)
+        - [Si es instalado por medio de install o se parte de la raiz del proyecto (composer install israeldavidvm/database-knowledgeable)](#si-es-instalado-por-medio-de-install-o-se-parte-de-la-raiz-del-proyecto-composer-install-israeldavidvmdatabase-knowledgeable)
       - [Uso como libreria](#uso-como-libreria)
     - [Make a donation. Your contribution will make a difference.](#make-a-donation-your-contribution-will-make-a-difference)
     - [Find me on:](#find-me-on)
@@ -201,9 +204,10 @@ Coincide con la siguiente expresion regular
 
 composer install israeldavidvm/database-knowledgeable
 
+composer global require israeldavidvm/database-knowledgeable
+
 composer require israeldavidvm/database-knowledgeable
 
-cpx israeldavidvm/database-knowledgeable generateMarkdownDocumentation
 
 ###### Como biblioteca (Solo si quieres crear un programa que use la libreria)
 composer require israeldavidvm/database-knowledgeable
@@ -225,12 +229,12 @@ DB_PASSWORD=<password>
 
 #### Uso desde la interfaz de linea de comandos 
 
-##### Usando cpx
+##### Si es incluido en un proyecto por medio de require con el global (composer global require israeldavidvm/database-knowledgeable)
 
 Para poder usar el programa solo necesitaras un archivo .env con la configuracion de tu base de datos como se especifico anteriormente y ejecutar el comando
 
 
-```cpx israeldavidvm/database-knowledgeable database-knowledgeable app:generateMarkdownDocumentation [<depth> [<path>]] ```
+```~/.config/composer/vendor/bin/database-knowledgeable app:generateMarkdownDocumentation [<depth> [<path>]] ```
 
 Arguments:
   depth                 Profundidad de los encabezados [default: 1]
@@ -244,30 +248,8 @@ Options:
       --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
   -n, --no-interaction  Do not ask any interactive question
   -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
-  
 
-
-##### De forma convencional
-
-Para poder usar el programa solo necesitaras un archivo .env con la configuracion de tu base de datos como se especifico anteriormente y ejecutar el comando
-
-
-```composer generateMarkdownDocumentation [<depth> [<path>]] ```
-
-Arguments:
-  depth                 Profundidad de los encabezados [default: 1]
-  path                  La ruta al archivo .env. [default: "./.env"]
-
-Options:
-  -h, --help            Display help for the given command. When no command is given display help for the list command
-      --silent          Do not output any message
-  -q, --quiet           Only errors are displayed. All other output is suppressed
-  -V, --version         Display this application version
-      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
-  -n, --no-interaction  Do not ask any interactive question
-  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
-  
-  ##### De forma convencional
+##### Si es incluido en un proyecto por medio de require sin el global (composer require israeldavidvm/database-knowledgeable)
 
 Para poder usar el programa solo necesitaras un archivo .env con la configuracion de tu base de datos como se especifico anteriormente y ejecutar el comando
 
@@ -287,7 +269,26 @@ Options:
   -n, --no-interaction  Do not ask any interactive question
   -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
   
+##### Si es instalado por medio de install o se parte de la raiz del proyecto (composer install israeldavidvm/database-knowledgeable)
 
+Para poder usar el programa solo necesitaras un archivo .env con la configuracion de tu base de datos como se especifico anteriormente y ejecutar el comando
+
+
+```composer generateMarkdownDocumentation [<depth> [<path>]] ```
+
+Arguments:
+  depth                 Profundidad de los encabezados [default: 1]
+  path                  La ruta al archivo .env. [default: "./.env"]
+
+Options:
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+      --silent          Do not output any message
+  -q, --quiet           Only errors are displayed. All other output is suppressed
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+  
 
 #### Uso como libreria
 
